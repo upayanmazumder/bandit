@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/upayanmazumder/bandit/issues"
   },
-  "homepage": "https://github.com/upayanmazumder/bandit#readme"
+  "homepage": "https://github.com/upayanmazumder/bandit#readme",
+  "dependencies": {
+    "concurrently": "^9.2.0"
+  }
 }
