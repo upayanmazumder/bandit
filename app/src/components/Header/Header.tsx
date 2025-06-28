@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="w-full max-w-screen overflow-x-hidden flex flex-row justify-between items-center px-0 bg-[var(--surface)] h-[100px] mx-auto">
+    <header className="w-full max-w-screen overflow-x-hidden flex flex-row justify-between items-center px-5 bg-[var(--surface)] h-[100px] mx-auto">
       <Branding />
       <Nav />
       <Actions />

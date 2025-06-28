@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import ThemeSelector from "./ThemeSelector";
 
@@ -15,17 +14,9 @@ function Branding() {
   return (
     <Link
       href="/"
-      className="flex flex-row justify-center items-center p-0 gap-2"
+      className="flex flex-row justify-center items-center py-0 px-5 gap-2 font-['Montserrat_Alternates'] !text-[var(--default)] text-[36px]"
     >
-      <div className="branding-icon-container">
-        <Image
-          src="/icon-transparent.svg"
-          alt="Bandit Logo"
-          fill
-          className="rounded-full branding-icon-img"
-          priority
-        />
-      </div>
+      Bandit
     </Link>
   );
 }
