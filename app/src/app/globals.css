@@ -100,6 +100,16 @@ a:hover {
   text-decoration: underline;
 }
 
+button {
+  background: var(--red);
+  color: var(--inverse);
+  transition: 0.2s ease-in-out;
+}
+
+button:hover {
+  background: var(--orange);
+}
+
 .branding-icon-container {
   width: 100px;
   height: 100px;
