@@ -1,8 +1,9 @@
+import Link from "next/link";
 import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="w-full max-w-screen overflow-x-hidden flex flex-row justify-between items-center px-0 gap-[clamp(24px,8vw,354px)] bg-[#dbcabe] h-[100px] mx-auto">
+    <header className="w-full max-w-screen overflow-x-hidden flex flex-row justify-between items-center px-0 bg-[var(--surface)] h-[100px] mx-auto">
       <Branding />
       <Nav />
       <Actions />
@@ -12,7 +13,10 @@ export default function Header() {
 
 function Branding() {
   return (
-    <div className="flex flex-row justify-center items-center p-0 gap-2">
+    <Link
+      href="/"
+      className="flex flex-row justify-center items-center p-0 gap-2"
+    >
       <div className="branding-icon-container">
         <Image
           src="/icon-transparent.svg"
@@ -22,7 +26,7 @@ function Branding() {
           priority
         />
       </div>
-    </div>
+    </Link>
   );
 }
 
@@ -38,16 +42,16 @@ function NavLink({
   textClassName?: string;
 }) {
   return (
-    <a
+    <Link
       href={href}
-      className={`flex flex-row justify-center items-center px-[29px] py-[22px] gap-2 !text-[#e35a34] font-medium text-[20px] leading-6 tracking-[0.1em] text-center transition-colors duration-200 hover:text-[var(--orange)] focus:text-[var(--orange)] no-underline ${className}`}
+      className={`flex flex-row justify-center items-center px-[29px] py-[22px] gap-2 !text-[var(--red)] font-medium text-[20px] leading-6 tracking-[0.1em] text-center transition-colors duration-200 hover:text-[var(--orange)] focus:text-[var(--orange)] no-underline ${className}`}
     >
       <span
         className={`flex items-center justify-center text-center ${textClassName}`}
       >
         {children}
       </span>
-    </a>
+    </Link>
   );
 }
 
@@ -85,7 +89,7 @@ function Actions() {
         <input
           type="text"
           placeholder="Search for something..."
-          className="w-[222px] h-[20px] font-medium text-[16px] leading-5 flex items-center text-center tracking-[0.1em] text-[#606059] bg-transparent border-none outline-none"
+          className="w-[222px] h-[20px] font-medium text-[16px] leading-5 flex items-center text-center tracking-[0.1em] text-[#4b4b4b] bg-transparent border-none outline-none"
         />
       </div>
       <NavLink href="/sign-in" className="ml-4 whitespace-nowrap">

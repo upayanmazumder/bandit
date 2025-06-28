@@ -107,3 +107,8 @@ a:hover {
 .branding-icon-img {
   object-fit: contain !important;
 }
+
+html,
+body {
+  overflow-x: hidden;
+}

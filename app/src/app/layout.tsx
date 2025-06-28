@@ -36,8 +36,7 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
     creator: "@upayanmazumder",
   },
-  themeColor: "#e35a33",
-  manifest: "/manifest.json",
+  manifest: "/manifest",
   robots: {
     index: true,
     follow: true,
@@ -92,6 +91,10 @@ export const metadata: Metadata = {
   applicationName: "Bandit",
   publisher: "Upayan Mazumder",
   category: "Music",
+};
+
+export const viewport = {
+  themeColor: "#e35a33",
 };
 
 export default function RootLayout({
