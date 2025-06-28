@@ -1,7 +1,7 @@
-import { NextResponse } from "next/server";
+import type { MetadataRoute } from "next";
 
-export default async function GET() {
-  const manifest = {
+export default function manifest(): MetadataRoute.Manifest {
+  return {
     name: "Bandit",
     short_name: "Bandit",
     description:
@@ -136,5 +136,4 @@ export default async function GET() {
     lang: "en-US",
     dir: "ltr",
   };
-  return NextResponse.json(manifest);
 }
