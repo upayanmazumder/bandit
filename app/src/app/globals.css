@@ -1,26 +1,90 @@
+/* Font Faces */
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat Alternates";
+  src: url("/fonts/Montserrat_Alternates/MontserratAlternates-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Red Hat Mono";
+  src: url("/fonts/Red_Hat_Mono/RedHatMono-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("/fonts/Red_Hat_Display/RedHatDisplay-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --card-bg: #81818117;
+  --default: #000000;
+  --inverse: #ffffff;
+  --background: #f9f4ef;
+  --surface: #dbcabe;
+  --muted: #606069;
+
+  --orange: #e78737;
+  --red: #e35a33;
+  --cyan: #5cc0eb;
+  --blue: #2a79ff;
+  --green: #42b883;
+  --emerald: #42b883;
 }
 
 @theme inline {
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-foreground: var(--default);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --card-bg: #d7d7d7bd;
+    --default: #ffffff;
+    --inverse: #000000;
+    --background: #121212;
+    --surface: #2a2622;
+    --muted: #a0a0a0;
   }
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--default);
+  font-family: "Montserrat", "Red Hat Display", "Poppins", "Inter", Arial,
+    Helvetica, sans-serif;
 }
