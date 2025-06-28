@@ -88,3 +88,22 @@ body {
   font-family: "Montserrat", "Red Hat Display", "Poppins", "Inter", Arial,
     Helvetica, sans-serif;
 }
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--cyan);
+  text-decoration: underline;
+}
+
+.branding-icon-container {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+.branding-icon-img {
+  object-fit: contain !important;
+}
